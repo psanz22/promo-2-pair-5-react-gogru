@@ -1,5 +1,6 @@
 import Header from './Header';
 import Board from './Board';
+import Dice from './Dice';
 import { useState } from 'react';
 import '../scss/App.scss';
 
@@ -12,6 +13,7 @@ function App() {
   const rollDice = () => {
     const randomNumber = Math.floor(Math.random() * 4) + 1;
     setDiceNumber(randomNumber);
+    console.log(randomNumber);
   };
 
   return (
@@ -21,9 +23,7 @@ function App() {
       <main className='page'>
         <Board />
         <section>
-          <button onClick={rollDice} className='dice'>
-            Lanzar Dado
-          </button>
+          <Dice handleDice={rollDice} />
           <div className='game-status'>En curso</div>
         </section>
 
