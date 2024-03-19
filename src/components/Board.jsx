@@ -1,19 +1,22 @@
 import '../scss/components/Board.scss';
 import Grogu from './Grogu';
 
-const Board = () => {
-  return (
-    <section className='board'>
-      <div className='cell'>
-        <Grogu />
-      </div>
-      <div className='cell'></div>
-      <div className='cell'></div>
-      <div className='cell'></div>
-      <div className='cell'></div>
-      <div className='cell'></div>
-      <div className='cell'></div>
-    </section>
-  );
+const Board = ({ positionGrogu }) => {
+  const cells = Array(7).fill(null);
+  const renderCells = () => {
+    return cells.map((cell, index) => {
+      if (positionGrogu === index) {
+        return (
+          <div key={index} className='cell'>
+            <Grogu />
+          </div>
+        );
+      } else {
+        return <div key={index} className='cell'></div>;
+      }
+    });
+  };
+
+  return <section className='board'>{renderCells()}</section>;
 };
 export default Board;

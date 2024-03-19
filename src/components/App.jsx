@@ -14,6 +14,9 @@ function App() {
     const randomNumber = Math.floor(Math.random() * 4) + 1;
     setDiceNumber(randomNumber);
     console.log(randomNumber);
+    if (randomNumber === 4) {
+      setPositionGrogu(positionGrogu + 1);
+    }
   };
 
   return (
@@ -21,7 +24,7 @@ function App() {
       {' '}
       <Header />
       <main className='page'>
-        <Board />
+        <Board positionGrogu={positionGrogu} />
         <section>
           <Dice handleDice={rollDice} />
           <div className='game-status'>En curso</div>
