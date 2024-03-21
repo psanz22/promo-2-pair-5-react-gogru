@@ -1,6 +1,6 @@
-import '../scss/components/Header.scss';
+import "../scss/components/Header.scss";
 
-const Header = () => {
+const Header = ({ nameValue }) => {
   return (
     <header>
       <h1>¡Cuidado con Grogu!</h1>

@@ -1,5 +1,15 @@
 1. **Inicializar el Estado**: Define el estado inicial del juego, incluyendo la posición inicial de Grogu, el conjunto de mercancías, y el resultado inicial del dado.
 
+   -El juego está en progreso
+   -Dados {
+   1 = 'Jugador' descarga un huevo
+   2 = 'Jugador' descarga una galleta
+   3 = 'Jugador' descarga una rana
+   4 = Grogu ha avanzado una casilla
+   -Si Grogu llega a la casilla 6 = Grogu llega a la mercancia y Grogu todo comer.
+   -Si descargamos toda la mercancía = 'Jugador' ha ganado la partida.
+   }
+
 2. **Lanzar el Dado**: Implementa una función para simular el lanzamiento del dado. Esta función generará un número aleatorio entre 1 y 4, y actualizará el estado del resultado del dado.
 
 3. **Mover a Grogu**: Basándote en el resultado del dado, actualiza la posición de Grogu en el tablero. Si Grogu alcanza el final del tablero (el armario), el juego termina y el jugador pierde.

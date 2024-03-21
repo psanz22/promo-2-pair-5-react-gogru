@@ -52,7 +52,11 @@ html {
   margin: 0 10px;
 }
 
-/* Añade estilos para el título y los contadores de mercancía aquí */
+.section__dice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* Contadores de mercancías */
 .goods-count {
