@@ -30,9 +30,12 @@ function App() {
     if (diceNumber === 4) {
       setPositionGrogu(positionGrogu + 1);
     } else if (diceNumber === 1) {
-      groguSteals(cookies);
+      const newCookies = cookies.slice(0, 1);
+      setCookies(newCookies);
     }
   };
+
+  useEffect(() => {}, []);
 
   const changeName = (value) => {
     setName(value);
@@ -48,9 +51,9 @@ function App() {
     });
   };
 
-  const groguSteals = (merchs) => {
-    return merchs.splice(0, 1);
-  };
+  // const groguSteals = (merchs) => {
+  //   merchs.splice(0, 1);
+  // };
 
   return (
     <>
