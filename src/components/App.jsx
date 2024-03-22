@@ -34,6 +34,11 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    const newCookies = groguSteals(cookies);
+    setCookies(newCookies);
+  }, []);
+
   const changeName = (value) => {
     setName(value);
   };
